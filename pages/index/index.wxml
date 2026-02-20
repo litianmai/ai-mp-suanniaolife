@@ -1,0 +1,3 @@
+<view class="container">
+  <view class="welcome-text">{{welcomeText}}</view>
+</view>

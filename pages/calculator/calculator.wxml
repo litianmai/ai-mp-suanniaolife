@@ -1,0 +1,40 @@
+<view class="container">
+  <!-- 显示屏 -->
+  <view class="display">
+    <view class="expression">{{expression}}</view>
+    <view class="result">{{result}}</view>
+  </view>
+
+  <!-- 按键区 -->
+  <view class="keypad">
+    <view class="row">
+      <view class="key function" bindtap="handleClear">C</view>
+      <view class="key function" bindtap="handleToggleSign">+/-</view>
+      <view class="key function" bindtap="handlePercent">%</view>
+      <view class="key operator" bindtap="handleOperator" data-op="/">÷</view>
+    </view>
+    <view class="row">
+      <view class="key number" bindtap="handleNumber" data-num="7">7</view>
+      <view class="key number" bindtap="handleNumber" data-num="8">8</view>
+      <view class="key number" bindtap="handleNumber" data-num="9">9</view>
+      <view class="key operator" bindtap="handleOperator" data-op="*">×</view>
+    </view>
+    <view class="row">
+      <view class="key number" bindtap="handleNumber" data-num="4">4</view>
+      <view class="key number" bindtap="handleNumber" data-num="5">5</view>
+      <view class="key number" bindtap="handleNumber" data-num="6">6</view>
+      <view class="key operator" bindtap="handleOperator" data-op="-">-</view>
+    </view>
+    <view class="row">
+      <view class="key number" bindtap="handleNumber" data-num="1">1</view>
+      <view class="key number" bindtap="handleNumber" data-num="2">2</view>
+      <view class="key number" bindtap="handleNumber" data-num="3">3</view>
+      <view class="key operator" bindtap="handleOperator" data-op="+">+</view>
+    </view>
+    <view class="row">
+      <view class="key number zero" bindtap="handleNumber" data-num="0">0</view>
+      <view class="key number" bindtap="handleDot">.</view>
+      <view class="key equal" bindtap="handleEquals">=</view>
+    </view>
+  </view>
+</view>
