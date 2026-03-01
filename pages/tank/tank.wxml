@@ -1,0 +1,53 @@
+<view class="game-container">
+  <!-- 游戏画布 -->
+  <canvas type="2d" id="gameCanvas" class="game-canvas"></canvas>
+
+  <!-- 游戏信息层 -->
+  <view class="game-info">
+    <view class="info-item">
+      <text class="label">关卡:</text>
+      <text class="value">{{level}}</text>
+    </view>
+    <view class="info-item">
+      <text class="label">生命:</text>
+      <text class="value">{{lives}}</text>
+    </view>
+    <view class="info-item">
+      <text class="label">得分:</text>
+      <text class="value">{{score}}</text>
+    </view>
+  </view>
+
+  <!-- 虚拟摇杆区域 -->
+  <view class="controls">
+    <!-- 方向摇杆 -->
+    <view class="joystick-container">
+      <view class="joystick-base">
+        <view class="joystick-stick" id="joystickStick" style="left: {{joystickX}}px; top: {{joystickY}}px;"></view>
+      </view>
+    </view>
+
+    <!-- 射击按钮 -->
+    <view class="fire-btn" bindtouchstart="handleFireStart" bindtouchend="handleFireEnd">
+      <text class="fire-text">射击</text>
+    </view>
+  </view>
+
+  <!-- 游戏结束弹窗 -->
+  <view class="modal" wx:if="{{gameOver}}">
+    <view class="modal-content">
+      <text class="modal-title">游戏结束</text>
+      <text class="modal-score">最终得分：{{score}}</text>
+      <button class="restart-btn" bindtap="restartGame">重新开始</button>
+    </view>
+  </view>
+
+  <!-- 开始游戏弹窗 -->
+  <view class="modal" wx:if="{{!gameStarted}}">
+    <view class="modal-content">
+      <text class="modal-title">坦克大战</text>
+      <text class="modal-desc">使用摇杆控制移动，点击射击按钮发射子弹</text>
+      <button class="start-btn" bindtap="startGame">开始游戏</button>
+    </view>
+  </view>
+</view>

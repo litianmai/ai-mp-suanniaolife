@@ -1,0 +1,100 @@
+<view class="container">
+  <!-- 头部背景区 -->
+  <view class="header-bg" style="background-image: url(/demo/2.png);">
+    <!-- 顶部状态栏占位 -->
+    <view class="status-bar"></view>
+
+    <!-- 菜单按钮 -->
+    <view class="top-bar">
+      <view class="menu-btn"></view>
+      <view class="top-right">
+        <view class="scan-btn"></view>
+        <view class="share-btn"></view>
+      </view>
+    </view>
+
+    <!-- 用户信息 -->
+    <view class="user-section">
+      <view class="avatar-placeholder"></view>
+      <view class="user-detail">
+        <view class="nickname">小鱼</view>
+        <view class="user-id">小红书号：1048972725</view>
+      </view>
+      <view class="add-btn"></view>
+    </view>
+
+    <!-- 简介 -->
+    <view class="bio">点击这里，填写简介</view>
+
+    <!-- 性别 -->
+    <view class="gender-icon"></view>
+
+    <!-- 统计数据 -->
+    <view class="stats-row">
+      <view class="stat-item">
+        <view class="stat-num">36</view>
+        <view class="stat-label">关注</view>
+      </view>
+      <view class="stat-item">
+        <view class="stat-num">1</view>
+        <view class="stat-label">粉丝</view>
+      </view>
+      <view class="stat-item">
+        <view class="stat-num">0</view>
+        <view class="stat-label">获赞与收藏</view>
+      </view>
+    </view>
+
+    <!-- 编辑按钮 -->
+    <view class="action-btns">
+      <view class="edit-btn">编辑资料</view>
+      <view class="settings-btn"></view>
+    </view>
+
+    <!-- 功能卡片 -->
+    <view class="feature-cards">
+      <view class="feature-item">
+        <view class="feature-icon gift-icon"></view>
+        <view class="feature-title">新春小红盒</view>
+        <view class="feature-desc">限时活动</view>
+      </view>
+      <view class="feature-item">
+        <view class="feature-icon idea-icon"></view>
+        <view class="feature-title">创作灵感</view>
+        <view class="feature-desc">学创作找灵感</view>
+      </view>
+      <view class="feature-item">
+        <view class="feature-icon history-icon"></view>
+        <view class="feature-title">浏览记录</view>
+        <view class="feature-desc">看过的笔记</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 发布提示 -->
+  <view class="publish-notice" bindtap="onPublish">
+    <view class="notice-left">
+      <view class="notice-img-placeholder"></view>
+      <view class="notice-text">
+        <view class="notice-title">分享最近的一次旅行照</view>
+        <view class="notice-desc">官方喊你来参与热门话题</view>
+      </view>
+    </view>
+    <view class="notice-right">
+      <view class="publish-btn">去发布</view>
+      <view class="close-btn" catchtap="onCloseNotice">×</view>
+    </view>
+  </view>
+
+  <!-- 确认弹窗 -->
+  <view class="modal-mask" wx:if="{{showModal}}">
+    <view class="modal-content">
+      <view class="modal-title">提示</view>
+      <view class="modal-body">是否跳转到百度搜索首页？</view>
+      <view class="modal-buttons">
+        <view class="modal-btn-cancel" bindtap="onCancel">否</view>
+        <view class="modal-btn-confirm" bindtap="onConfirm">是</view>
+      </view>
+    </view>
+  </view>
+</view>

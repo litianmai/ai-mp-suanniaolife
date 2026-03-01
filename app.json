@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/calculator/calculator"
+    "pages/calculator/calculator",
+    "pages/tank/tank",
+    "pages/menu/menu"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -22,6 +24,14 @@
       {
         "pagePath": "pages/calculator/calculator",
         "text": "计算器"
+      },
+      {
+        "pagePath": "pages/tank/tank",
+        "text": "坦克大战"
+      },
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "个人"
       }
     ]
   },
