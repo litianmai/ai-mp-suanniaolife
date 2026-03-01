@@ -1,3 +1,12 @@
 <view class="container">
+  <!-- 顶部标题 -->
   <view class="welcome-text">{{welcomeText}}</view>
+
+  <!-- 控制按钮 -->
+  <view class="control-panel">
+    <button class="fire-btn" bindtap="fireMissile">发射导弹</button>
+  </view>
+
+  <!-- Canvas 画布 - 放在最后，覆盖整个屏幕 -->
+  <canvas type="2d" id="missileCanvas" class="missile-canvas"></canvas>
 </view>

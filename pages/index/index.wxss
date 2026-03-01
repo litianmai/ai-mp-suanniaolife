@@ -1,16 +1,54 @@
 page {
-  background-color: #f5f5f5;
+  background-color: #1a1a2e;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .container {
+  position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   height: 100vh;
+  padding: 120rpx 40rpx 160rpx;
+  box-sizing: border-box;
 }
 
 .welcome-text {
   font-size: 48rpx;
   color: #07c160;
   font-weight: 500;
+  margin-top: 100rpx;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.missile-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.control-panel {
+  z-index: 20;
+  margin-bottom: 40rpx;
+}
+
+.fire-btn {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff2442 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 50rpx;
+  padding: 24rpx 80rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  box-shadow: 0 8rpx 32rpx rgba(255, 36, 66, 0.4);
+}
+
+.fire-btn:active {
+  transform: scale(0.95);
 }

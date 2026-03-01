@@ -5,15 +5,15 @@
   <!-- 游戏信息层 -->
   <view class="game-info">
     <view class="info-item">
-      <text class="label">关卡:</text>
+      <text class="label">关卡</text>
       <text class="value">{{level}}</text>
     </view>
     <view class="info-item">
-      <text class="label">生命:</text>
+      <text class="label">生命</text>
       <text class="value">{{lives}}</text>
     </view>
     <view class="info-item">
-      <text class="label">得分:</text>
+      <text class="label">得分</text>
       <text class="value">{{score}}</text>
     </view>
   </view>
@@ -21,9 +21,9 @@
   <!-- 虚拟摇杆区域 -->
   <view class="controls">
     <!-- 方向摇杆 -->
-    <view class="joystick-container">
+    <view class="joystick-container" bindtouchstart="handleJoystickStart">
       <view class="joystick-base">
-        <view class="joystick-stick" id="joystickStick" style="left: {{joystickX}}px; top: {{joystickY}}px;"></view>
+        <view class="joystick-stick" style="left: {{joystickX}}px; top: {{joystickY}}px;"></view>
       </view>
     </view>
 
